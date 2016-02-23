@@ -44,9 +44,9 @@ doctrine:
         driver:   pdo_mysql
         host:     "%database_host%"
         port:     "%database_port%"
-        dbname:   "%database_name%"
+        dbname:   "arktips"
         user:     "%database_user%"
-        password: "%database_password%"
+        password: "root"
         charset:  UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
@@ -67,3 +67,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: AppBundle\Entity\User
